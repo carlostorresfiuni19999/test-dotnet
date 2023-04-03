@@ -13,6 +13,10 @@ export const FormTodo = (props) => {
 
     function handleSubmit(e) {
         e.preventDefault();
+
+        if (state.name.length < 1) {
+            alert("No se aceptan caracteres en blanco");
+        }
         console.log("Ejecutando");
         props.onSubmit(state);
         
